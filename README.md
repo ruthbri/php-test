@@ -62,7 +62,7 @@ Este repositorio define una tarea para evaluar las habilidades de comprensión y
 2. La forma de entrega es mediante la creación de un Pull Request desde su fork hacia este repositorio.
 3. Se valorará que además comparta un video con una pequeña demo del trabajo realizado, explicando los flujos de usuario que son soportados (no es necesario que explique el código). Puede subir el video a YouTuve y agregar el link en la documentación que entregue.
 
-## La fecha límite para la entrega es el domingo 29 de Marzo a las 23:59.
+## La fecha límite para la entrega es el domingo 29 de Mayo a las 23:59.
 
 # Dudas?
 
