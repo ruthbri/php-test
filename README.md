@@ -22,7 +22,7 @@ Este repositorio define una tarea para evaluar las habilidades de comprensión y
    8. La aplicación muestra una ventana modal con un formulario que tiene un file picker y un botón "upload"
    9. El usuario hace clic en el file picker
    10. La aplicación abre el selector de archivos del sistema operativo
-   11. El usuario selecciona un archivo CSV (presente en este repositorio) y hace clic en OK
+   11. El usuario selecciona un archivo CSV ("codigos.csv" presente en este repositorio) y hace clic en OK
    12. El archivo queda seleccionado en el file picker
    13. El usuario hace clic en el botón "upload" de la ventana modal
    14. La aplicación recibe el archivo, lo procesa y carga los datos en la base de datos, antes de guardar en la base de datos debe verificar que no hay items repetidos, comparando los códigos dentro del CSV
@@ -47,6 +47,7 @@ Este repositorio define una tarea para evaluar las habilidades de comprensión y
 6. El esquema de la base de datos debe ser el siguiente:
    1. user(id integer PK, email varchar(255) not null, password varchar(255) not null)
    2. cpt(id indeger PK, code varchar(255) not null, description text not null)
+   3. Los identificadores son autoincrementales.
 
 ## Notas generales:
 
@@ -55,6 +56,10 @@ Este repositorio define una tarea para evaluar las habilidades de comprensión y
 3. Utilizar jQuery para manejar las interacciones con AJAX
 4. Los datos deben estar almacenados en MySQL
 5. Debe incluir un script que se pueda ejecutar directamente desde la terminal, que cargue un par de usuarios en la base de datos
+6. El archivo `codigos.csv` contiene valores con comillas dobles dentro del texto de la segunda columna (ej. el texto del código `A4719` debe cargarse en la base de datos exactamente como `"y set" Tubing for Peritoneal Dialysis`), también hay textos con paréntesis, puntos y comas, barras `/` y otros símbolos: `<`, `>`, `&`, `%` o con comas `,`. La carga debe mantener los textos tal cual están en el archivo.
+7. Notar también que algunos textos en el archivo con bastante largos, debe tener en cuenta esto al crear el esquema de la base de datos, dado que el texno NO DEBE TRUNCARSE.
+8. Y notar que se agregaron códigos repetidos para que verifique duplicados en la subida: no se deberían cargar items con códigos duplicados. LOS DUPLICADOS NO TIENEN POR QUÉ SER ITEMS CONSECUTIVOS dentro del archivo.
+9. El archivo puede contener líneas en blanco, se deben filtrar.
 
 # Entrega:
 
