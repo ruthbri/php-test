@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require "controllerLoad.php";
-require 'C:\xampp\htdocs\phpTest_20\vendor\autoload.php';
+require 'vendor\autoload.php';
 
 
     $mail = new PHPMailer(true);
